@@ -25,16 +25,11 @@ tail -n +2 "$CSV" \
 	| sort -t, -k5 -nr | head -20 \
 	  > "$OUTDIR/top_comments.csv"
 
-# 4) Skinny table (video_id,comment_id,like_count), unique rows
-{ echo "video_id,comment_id,like_count"
-	  tail -n +2 "$CSV" | cut -d, -f1,2,5
-  } > "$OUTDIR/skinny_comments.csv"
-
-  # 5) Top-N entity list WITH counts (top videos by comment count)
+  # 4) Top-N entity list WITH counts (top videos by comment count)
   cut -d, -f1 "$CSV" | tail -n +2 | sort | uniq -c | sort -nr | head -20 \
 	    > "$OUTDIR/top_videos.txt"
 
-  # 6) grep -i / grep -v (simple showcase)
+  # 5) grep -i / grep -v (simple showcase)
   grep -i -c "great" "$CSV" > "$OUTDIR/grep_count_good.txt"
   grep -vi -c "bad"  "$CSV" > "$OUTDIR/grep_count_no_bad.txt"
 
