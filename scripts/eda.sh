@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Output directory
-OUTDIR="/mnt/scratch/CS131_jelenag/students/hienl/project"
+OUTDIR="/mnt/scratch/CS131_jelenag/students/<yournamedir>/project"
 mkdir -p "$OUTDIR"
 CSV="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data/yt_comments.csv"
 # Files used:
