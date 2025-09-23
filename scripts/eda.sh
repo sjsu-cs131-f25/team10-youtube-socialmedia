@@ -23,7 +23,7 @@ tail -n +2 "$CSV" | rev | cut -d, -f4- | rev | sort -t, -k5 -nr | head -20 \
 	> "$OUTDIR/top_comments.csv"
 # 4) Skinny comments table (video_id, comment_id, like_count)
 { echo "video_id,comment_id,like_count"
-	  tail -n +2 "$CSV" | cut -d, -f1,2,5
+	  tail -n +2 "$CSV" | cut -d, -f1,2,5 | sort -u
   } > "$OUTDIR/skinny_comments.csv"
 
 echo "Done. Results in $OUTDIR"
