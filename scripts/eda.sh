@@ -14,7 +14,7 @@ cut -d, -f9 "$CSV" | tail -n +2 | grep '^UC' | sort | uniq -c | sort -nr \
 	  > "$OUTDIR/freq_channel_id.txt"
 
 # 2) Frequency of published dates (YYYY-MM-DD from col 4)
-tail -n +2 "$CSV" \
+cut -d, -f4 "$CSV" | tail -n +2 \
 	| grep -o -E '[0-9]{4}-[0-9]{2}-[0-9]{2}' \
 	| sort | uniq -c | sort -nr \
 	> "$OUTDIR/freq_dates.txt"
