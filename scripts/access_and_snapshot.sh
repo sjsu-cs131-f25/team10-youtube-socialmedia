@@ -13,7 +13,7 @@ DATASET="${1:-}"; N="${2:-1000}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 OUT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 LOG_DIR="$OUT_ROOT/logs"
-SAMPLES_DIR="$OUT_ROOT/data/samples"
+SAMPLES_DIR="$OUT_ROOT/out/"
 mkdir -p "$LOG_DIR" "$SAMPLES_DIR"
 
 # Pick streaming command

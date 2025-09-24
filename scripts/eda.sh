@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Adjust this to your folder name
-OUTDIR="/mnt/scratch/CS131_jelenag/students/hienl/project"
-mkdir -p "$OUTDIR"
+OUTDIR="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/out/"
+# mkdir -p "$OUTDIR"
 
 CSV="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data/yt_comments.csv"
 # Columns:
