@@ -1,2 +1,1 @@
-To download the dataset, open the following link and click on the download button in the top right corner of the page
-https://www.kaggle.com/datasets/datasnaek/youtube
+To download the dataset, open the src code folder and run the collector.py script. The data will populate in the data folder, then allowing you to run the shell scripts to analyze the data.
