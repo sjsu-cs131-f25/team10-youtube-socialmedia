@@ -14,14 +14,16 @@ cut -d, -f9 "$CSV" | tail -n +2 | grep '^UC' | sort | uniq -c | sort -nr \
 	  > "$OUTDIR/freq_channel_id.txt"
 
 # 2) Frequency of published dates (YYYY-MM-DD from col 4)
-cut -d, -f4 "$CSV" | tail -n +2 | cut -c1-10 | sort | uniq -c | sort -nr \
-	  > "$OUTDIR/freq_dates.txt"
+tail -n +2 "$CSV" \
+	| grep -o -E '[0-9]{4}-[0-9]{2}-[0-9]{2}' \
+	| sort | uniq -c | sort -nr \
+	> "$OUTDIR/freq_dates.txt"
 
   # 3) Top-N entity list WITH counts (top videos by comment count)
-  cut -d, -f1 "$CSV" | tail -n +2 | sort | uniq -c | sort -nr | head -20 \
+  cut -d, -f1 "$CSV" | tail -n +2 | grep -v '^$' | sort | uniq -c | sort -nr | head -20 \
 	    > "$OUTDIR/top_videos.txt"
 
-  # 4) grep -i / grep -v 
+  # 4) grep -i / grep -v (simple showcase)
   grep -i -c "great" "$CSV" > "$OUTDIR/grep_count_great.txt"
   grep -vi -c "bad"  "$CSV" > "$OUTDIR/grep_count_no_bad.txt"
 
