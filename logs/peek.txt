@@ -1,0 +1,5 @@
+video_id,comment_id,author_display_name,published_at,like_count,comment_text,is_reply,parent_id,channel_id
+2JzOe1Hs26Q,UgzbTBnsh8XTZ6iAkQF4AaABAg,@eduardowhitehead7598,2025-09-13T22:03:48Z,0,"Marzia probably asked: “So, what does this button do?”",0,,UCA_Gt9Mu-aX5L-iwJwPIWKQ
+2JzOe1Hs26Q,UgzUWI8tOtmA8Ll8biR4AaABAg,@melvinteran6198,2025-09-13T21:15:30Z,0,Estoy cansado de tener un solo alimento diario libertad presos políticos niños niñas adolescentes adultos,0,,UCEGeOPWMFy38hjpNNJf9L4g
+2JzOe1Hs26Q,Ugys8Kf3ETJCvaeeVat4AaABAg,@melvinteran6198,2025-09-13T21:14:17Z,0,Venezuela libre,0,,UCEGeOPWMFy38hjpNNJf9L4g
+2JzOe1Hs26Q,UgwIYOSIt0mvgQD3sA54AaABAg,@sandyseybert,2025-09-13T21:05:36Z,0,Mid-video pattern breaks reset attention.,0,,UCrcxT8ZE48HpnzYA_rZz0VQ
