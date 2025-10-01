@@ -1,0 +1,249 @@
+Script started on 2025-09-29 17:23:09-04:00
+bash-4.4$ cd ../../projects
+bash: cd: ../../projects: No such file or directory
+bash-4.4$ cd ../../projects[K[K[K[K[K[K[K[K[K
+bash-4.4$ cd [K projke[K[Kects/team10_sec3/team1-[K0[K[K[K[K[K[K
+bash: cd: projects/team10_sec3/: No such file or directory
+bash-4.4$ cd projects/team10_sec3/[C[C[C[C[C[C[C[C[C[C[Kpwd
+/mnt/scratch/CS131_jelenag/students/jacoba
+bash-4.4$ cd ../..
+bash-4.4$ cd projects [K/team10_sec3/te[Keam10-youtube-socialmedia/
+bash-4.4$ pwd
+/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia
+bash-4.4$ ls
+data  out
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ lspwdcd projects/team10_sec3/team10-youtube-socialmedia/[C[C[C[C[C[C[C[C[C[C[C[C[C../..[K[5Ppwdcd projects/team10_sec3/[C[C[C[C[C[C[C[C[C[C[C[C[C../..[K/projects[C[C[C[C[C[C[C[C[C[C[Cut -d $',' -f1,2 yt_comments.csv > videos_and_comment_ids.csv | head video_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C| tail -n 20[Khead[C[C[C[C[C[Ctail[C[C[C[C[C[C> videos_and_comment_ids.csv | head video_and_comment_ids.csv [1@.[1@/[1@d[1@a[1@r[1@t[1@a[1P[1P[1P[1@t[1@a[1@/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@o[1@u[1@t[1@.[1@/[1@d[1@a[1@t[1@a[1@/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@c[1@d[C[1@ [1P[1P[1P[C[1@ [1@c[1@d[C[1@ [1@o[1@u[1@t[C[1@ [1@|
+head: cannot open 'video_and_comment_ids.csv' for reading: No such file or directory
+bash-4.4$ cut -d $',' -f1,2 ./data/yt_comments.csv > ./out/videos_and_comment_ids.csv | cd out | head video_and_comment_ids.csv [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdata[C[C[C[C[C[C[C[C[C[Cls[Kpwd[1Plscut -d $',' -f1,2 data[C[C[C[C[C[C[C[C[C[C[Kcut -d $',' -f1,2 ./data/yt_comments.csv > ./out/videos_and_comment_ids.csv | cd out | head video_and_comment_ids.csv [C[C[C[C[C[C[C[1P[1P
+bash: /out/videos_and_comment_ids.csv: No such file or directory
+head: cannot open 'video_and_comment_ids.csv' for reading: No such file or directory
+bash-4.4$ cd out
+bash-4.4$ ls
+''$'\n\n''echo Generating'   freq_dates.txt	    grep_count_no_bad.txt   top_videos.txt
+ freq_channel_id.txt	     grep_count_great.txt   sampleOuts		    videos_and_comment_ids.csv
+bash-4.4$ head videos_and_comment_ids.csv 
+video_id,comment_id
+n_Lv_mw6m6c,UgxoteA9ZjV69ao3wzd4AaABAg
+n_Lv_mw6m6c,UgwVIjcXJSlw1bdNuAJ4AaABAg
+n_Lv_mw6m6c,UgwDgmIPkt3zdqFsd2p4AaABAg
+n_Lv_mw6m6c,UgyXOOr1fWgF1ZQhrzR4AaABAg
+I'm actually worried",0
+n_Lv_mw6m6c,UgyVSx48xDaEwIgWY-B4AaABAg
+n_Lv_mw6m6c,Ugwh4YY9xRkFi54EUNd4AaABAg
+n_Lv_mw6m6c,UgxlHkzzYDm8kMvnGmJ4AaABAg
+n_Lv_mw6m6c,Ugzdog4eXnMpgtesK0F4AaABAg
+bash-4.4$ wc -l yt_[K[K[Kvideos_and_comment_ids.csv 
+283678 videos_and_comment_ids.csv
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ cd ..
+bash-4.4$ cd data
+bash-4.4$ mkdir processed && cd processed
+bash-4.4$ mv /mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/ [Kout/c[Kvideos_and_comment_ids.csv /mnt/scratch/CS131_jeleenag/projects/team10_sec3/team10-youtube-socialmedia/out/processed
+bash-4.4$ ls
+bash-4.4$ cd ..
+bash-4.4$ ;[Kls
+channels.txt		collected_videos.csv  download_instructions.md	samples			    yt_channel_data.csv  yt_video_data.csv
+collected_comments.csv	data_card.md	      processed			videos_and_comment_ids.csv  yt_comments.csv
+bash-4.4$ mv c[Kvideos_and_comment_ids.csv processed
+bash-4.4$ cd processed
+bash-4.4$ ls
+videos_and_comment_ids.csv
+bash-4.4$ cd ..
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ echo ""p"a"r"e"d" "[1P"[1P"nt co"mments" "-">" "r"e"p"l"i"e"s"
+parent comments -> replies
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ cut -d $',' -f1,2 ./data/yt_comments.csv > ./out/videos_and_comment_ids.csv | cd out | head video_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1@p[1@r[1@o[1@c[1@e[1@s[1@s[1@e[1@d[1@/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [K[1P [1P [1P [1P [K[1P [K[1P [1P [1P [K[1P [1P [K[1P [K[C[C[C[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kawk _F [K, ""[K[C[K'NR==1[1P[1@-[C[C[C[C[C[C[C[C[C || $7 == 1 { print $2 "," $4 }' [C[C[1@ [1@{[1@}[1@"[1P[1@p[1@r[1@i[1@n[1@t[1@ [1@"[1@"[1@P[1@a[1@r[1@e[1@n[1@t[1P[1P[1P[1P[1P[1P[1@p[1@a[1@r[1@e[1@n[1@t[1@_[1@c[1@o[1@m[1@m[1@e[1@n[1@t[1@_[1@i[1@d[1@,[1@r[1@e[1@p[1@l[1@y[1@_[2@id[C[C[C[1@;[1@ [1@n[1@e[1@x[1@t[C[C[C[C[C[C[C[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cyt_comments.csv > commentw[K[Kts_with_re[p[K[Kplies.csvv [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/comments_with_replies.csv [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpcomments_with_replies.csvv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crcomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cocomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccomments_with_repli[1Pes.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccomments_with_replie[1Ps.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccomments_with_replies[1P.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccomments_with_replies.[1Pcsv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Comments_with_replies.c[1Psv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccomments_with_replies.cs[1Pv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccomments_with_replies.csv[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccomments_with_replies.csv [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pcomments_with_replies.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpcomments_with_replies.csv [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crcomments_with_replies.csvv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cocomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdcomments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/comments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ cd c[Kprocessed/ && head commed[Kt[Knts_with_replies.csv
+parent_comment_id,reply_id
+Ugw6x2nh4g7yYhohQFZ4AaABAg.ANaBFrnp8wcANaBQ3HPoTD,2025-09-27T21:00:49Z
+UgzS1yQ6zCKZsfXoi7V4AaABAg.ANa3zMTmDN5ANa4N4GZrTF,2025-09-27T19:59:15Z
+UgzSFpORGL00H8-nwnJ4AaABAg.ANa0hPvQ9HaANa0m8nMMd7,2025-09-27T19:27:52Z
+Ugw5BQaRR0g_sMqmx2J4AaABAg.AN_zlD-mM-AANa-o6kF4Ry,2025-09-27T19:19:23Z
+UgyolhHq1jzAqPp6pF94AaABAg.AN_whalsPTYAN_wivMi8_l,2025-09-27T18:43:43Z
+Ugy5NzkjPGOP1LwcWFZ4AaABAg.AN_wcZYER1lAN_xk-rNYey,2025-09-27T18:52:37Z
+Ugy5NzkjPGOP1LwcWFZ4AaABAg.AN_wcZYER1lANa3AHDbNXb,2025-09-27T19:48:46Z
+UgzQNepocNaYygFDqVp4AaABAg.AN_vo5dfbTYAN_wRDc1dhN,2025-09-27T18:41:10Z
+UgxkDjuhtwsAxPaHNl54AaABAg.AN_vGrUe2_gAN_xtiaiIJY,2025-09-27T18:53:56Z
+bash-4.4$ cd processed/ && head comments_with_replies.csv[C[C[C[C[C[C[C[C[C[Cawk -F, 'NR==1 {print "parent_comment_id,reply_id"; next} $7 == 1 { print $2 "," $4 }' yt_comments.csv > processed/comments_with_repplies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "," $4 }' yt_comments.csv > processed/comments_with_repl[1Pies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2 "," $4 }' yt_comments.csv > processed/comments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "," $4 }' yt_comments.csv > processed/comments_with_repl[1Pies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp "," $4 }' yt_comments.csv > processed/comments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca "," $4 }' yt_comments.csv > processed/comments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "," $4 }' yt_comments.csv > processed/comments_with_rep[1Plies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "," $4 }' yt_comments.csv > processed/comments_with_repl[1Pies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C8 "," $4 }' yt_comments.csv > processed/comments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C }' yt_comments.csv > processed/comments_with_repl[1Pies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2 }' yt_comments.csv > processed/comments_with_replies.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+bash: processed/comments_with_replies.csv: No such file or directory
+bash-4.4$ cd ..
+bash-4.4$ cd ..awk -F, 'NR==1 {print "parent_comment_id,reply_id"; next} $7 == 1 { print $8 "," $2 }' yt_comments.csv > processed/comments_with_repplies.csv
+bash-4.4$ cd `
+> ^C
+bash-4.4$ cd `[K-
+/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data/processed
+bash-4.4$ head comments_with_replies.csv 
+parent_comment_id,reply_id
+Ugw6x2nh4g7yYhohQFZ4AaABAg,Ugw6x2nh4g7yYhohQFZ4AaABAg.ANaBFrnp8wcANaBQ3HPoTD
+UgzS1yQ6zCKZsfXoi7V4AaABAg,UgzS1yQ6zCKZsfXoi7V4AaABAg.ANa3zMTmDN5ANa4N4GZrTF
+UgzSFpORGL00H8-nwnJ4AaABAg,UgzSFpORGL00H8-nwnJ4AaABAg.ANa0hPvQ9HaANa0m8nMMd7
+Ugw5BQaRR0g_sMqmx2J4AaABAg,Ugw5BQaRR0g_sMqmx2J4AaABAg.AN_zlD-mM-AANa-o6kF4Ry
+UgyolhHq1jzAqPp6pF94AaABAg,UgyolhHq1jzAqPp6pF94AaABAg.AN_whalsPTYAN_wivMi8_l
+Ugy5NzkjPGOP1LwcWFZ4AaABAg,Ugy5NzkjPGOP1LwcWFZ4AaABAg.AN_wcZYER1lAN_xk-rNYey
+Ugy5NzkjPGOP1LwcWFZ4AaABAg,Ugy5NzkjPGOP1LwcWFZ4AaABAg.AN_wcZYER1lANa3AHDbNXb
+UgzQNepocNaYygFDqVp4AaABAg,UgzQNepocNaYygFDqVp4AaABAg.AN_vo5dfbTYAN_wRDc1dhN
+UgxkDjuhtwsAxPaHNl54AaABAg,UgxkDjuhtwsAxPaHNl54AaABAg.AN_vGrUe2_gAN_xtiaiIJY
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ cd ..
+bash-4.4$ ls
+channels.txt		collected_videos.csv  download_instructions.md	samples		     yt_comments.csv
+collected_comments.csv	data_card.md	      processed			yt_channel_data.csv  yt_video_data.csv
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ lscd ..head comments_with_replies.csv [C[C[C[C[C[C[C[C[C[Ccd -[K`awk -F, 'NR==1 {print "parent_Script started, file is typescript
+bash-4.4$ ^C
+bash-4.4$ ^C
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+Display all 2043 possibilities? (y or n)Script started, file is typescript
+bash-4.4$ ççcdfdç:qw
+bash: ççcdfdç:qw: command not found
+bash-4.4$ 
+Display all 2043 possibilities? (y or n)Script started on 2025-09-29 18:43:14-04:00
+bash-4.4$ 
+bash-4.4$ cd ../..
+bash-4.4$ cd /proc/[K[Ke[Kjects [K[K[K[K[K[K[K[K[K[K[K[K[Kcd ..][K
+bash-4.4$ cd project[K[K[K[K[K[K[K[K[K[Kcd ..
+bash-4.4$ cd projects/team10_sec3/tem[Kam10-youtube-socialmedia/data/
+bash-4.4$ ls
+channels.txt		collected_videos.csv  download_instructions.md	samples		     yt_comments.csv
+collected_comments.csv	data_card.md	      processed			yt_channel_data.csv  yt_video_data.csv
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ lscd projects/team10_sec3/team10-youtube-socialmedia/data/[C[C[C[C[C[C[C[C[C[C[C[C[C..[K/..ççcdfdç:qwscript >> jacoba-edges-session.txt [C[C[C[C[C[C[C[C[C[Ccd team10-youtube-socialmedia/scripts/[K[C[C[C[C[C[C[C[C[C[CNeonninja1![Kscript >> jacoba-edges-session.txt [C[C[C[C[C[C[C[C[C[C[6Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd team10-youtube-socialmedia/scripts/[C[C[C[C[C[C[C[C[C[C[Cut -d $',' -f1,2 yt_comments.csv > videos_and_comment_ids.csv | head video_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C| tail -n 20[Khead[C[C[C[C[C[Ctail[C[C[C[C[C[C> videos_and_comment_ids.csv | head video_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[C[58Pd team10-youtube-socialmedia/scripts/[C[C[C[C[C[C[C[C[C[C[C[9Pat jacoba-edges-session.txt [C[C[C[C[C[C[C[C[C[C[6@script >>[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CNeonninja1![Kcd team10-youtube-socialmedia/scripts/[K[C[C[C[C[C[C[C[C[C[CNeonninja1![Kscript >> jacoba-edges-session.txt [C[C[C[C[C[C[C[C[C[C[6Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd team10-youtube-socialmedia/scripts/[C[C[C[C[C[C[C[C[C[C[Cut -d $',' -f1,2 yt_comments.csv > videos_and_comment_ids.csv | head video_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C| tail -n 20[Khead[C[C[C[C[C[C[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P\t' -f1,2 yt_comments.csv[C[7@| head [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pyt_comments.csv | head[C[C[C[C[C[C[C[C[C[C[11Phead -n 1 yt_channel_data.csv [2Pvideo[C[C[C[C[C[C[C[C[C[C[3Pcomments.csv[C[C[C[C[C[C[C[C[C[Cecho "finding edges in datasets"[C[C[C[C[C[C[C[C[C[Cls[Kcd /mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data/[C[C[C[C[C[C[C[C[C[Cls[Kecho "finding edges in datasets"[C[C[C[C[C[C[C[C[C[C[7Phead -n 1 yt_comments.csvvideo_data.csv [2@channel[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccut -d $'\t' -f1,2 yt_comments.csv | head| head yt_comments.csv [7P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6@,' -f1,2 yt_comments.csv | head[C-n 20tail[C[C[C[C[C[C> videos_and_comment_ids.csv | head video_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[C[58Pd team10-youtube-socialmedia/scripts/[C[C[C[C[C[C[C[C[C[C[C[9Pat jacoba-edges-session.txt [C[C[C[C[C[C[C[C[C[C[6@script >>[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CNeonninja1![Kcd team10-youtube-socialmedia/scripts/[C[C[C[C[C[C[C[C[C[C[3Pscript >> jacoba-edges-session.txt [C[C[C[C[C[C[C[C[C[Cççcdfdç:qwScript started on 2025-09-29 19:15:28-04:00
+bash-4.4$ ./[K./../..
+bash: ../../..: Is a directory
+bash-4.4$ ../..
+bash: ../..: Is a directory
+bash-4.4$ sc../../..c../../..d../../.. ../../..
+bash-4.4$ pwd
+/mnt/scratch/CS131_jelenag/students
+bash-4.4$ cd ..
+bash-4.4$ cd projects/team10_sec3/team10-youtube-socialmedia/data/
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ cd projects/team10_sec3/team10-youtube-socialmedia/data/[C[C[C[C[C[C[C[C[C[C[C[C[C..[Kprojects/team10_sec3/team10-youtube-socialmedia/data/[C[C[C[C[C[C[C[C[C[C[C[C[C..[K[2Ppwdcd ../../..[6P../../..head -n 1 yt_comments.csv [K[C[C[C[C[C[C[C[C[C[Cls[Khead -n 1 yt_comments.csv [K[C[C[C[C[C[C[C[C[C[Cls[Kcd projects/team10_sec3/team10-youtube-socialmedia/data/[C[C[C[C[C[C[C[C[C[C[C[C[C..[Kprojects/team10_sec3/team10-youtube-socialmedia/data/[C[C[C[C[C[C[C[C[C[C[C[C[C..[K/..script -a jacoba-edges-session.txt [C[C[C[C[C[C[C[C[C[Ccd team10-youtube-socialmedia/scripts/[C[C[C[C[C[C[C[C[C[Cççcdfdç:qw[Kscript >> jacoba-edges-session.txt [C[C[C[C[C[C[C[C[C[Ccd team10-youtube-socialmedia/scripts/[K[C[C[C[C[C[C[C[C[C[CNeonninja1![Kscript >> jacoba-edges-session.txt [C[C[C[C[C[C[C[C[C[C[6Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd team10-youtube-socialmedia/scripts/[C[C[C[C[C[C[C[C[C[C[Cut -d $',' -f1,2 yt_comments.csv > videos_and_comment_ids.csv | head video_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [K[1P [1P [1P [1P [K[1P [K[1P[1P[1P[1P[1P[1P[1@a[1@u[2@th[1@o[1@r[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@1[1@0[C[C[1P[1@1[C[C[C
+bash-4.4$ cd out [K[K[K[K[K processed/
+bash-4.4$ head author[K[K[K[K[K[K[K[Kd -n[K[K[K[K[K[K[Kls
+comments_with_replies.csv  videos_and_comment_ids.csv
+bash-4.4$ lscd processed/[C[C[C[C[C[C[C[C[C[Cls[K[Kcd -
+/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data
+bash-4.4$ head author_and_comment_ids.csv 
+video_id
+n_Lv_mw6m6c
+n_Lv_mw6m6c
+n_Lv_mw6m6c,
+n_Lv_mw6m6c
+I'm actually worried"
+n_Lv_mw6m6c
+n_Lv_mw6m6c
+n_Lv_mw6m6c
+n_Lv_mw6m6c
+bash-4.4$ head author_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[Ccd -[Khead author_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[Ccd -[Khead author_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[Khead author_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[Ccd -[K[2Plscd processed/ut -d $',' -f10,1 yt_comments.csv > author_and_comment_ids.csv [C[C[C[1P[1P[1@9[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+bash-4.4$ head author_and_comment_ids.csv 
+video_id,channel_id
+n_Lv_mw6m6c,UCgio1HCYjOq7WCy9vjjA_6g
+n_Lv_mw6m6c,UCBePWH5sTKbTZPeCmCrWhcw
+n_Lv_mw6m6c,0
+n_Lv_mw6m6c
+I'm actually worried"
+n_Lv_mw6m6c,UCBxU0wKr8kCxh85wZaP7p-g
+n_Lv_mw6m6c,UCTnNRrAUADc-NY8MnrPhGVQ
+n_Lv_mw6m6c,UC0yNcF0IMwKWBX40Wa9H8Cw
+n_Lv_mw6m6c,UCmX8fiFP5ppRTgwMrvd4zKA
+bash-4.4$ head author_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[31@cut -d $',' -f9,1 yt_comments.csv >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1@1[1@,[1@9
+bash-4.4$ head author_and_comment_ids.csv 
+video_id,channel_id
+n_Lv_mw6m6c,UCgio1HCYjOq7WCy9vjjA_6g
+n_Lv_mw6m6c,UCBePWH5sTKbTZPeCmCrWhcw
+n_Lv_mw6m6c,0
+n_Lv_mw6m6c
+I'm actually worried"
+n_Lv_mw6m6c,UCBxU0wKr8kCxh85wZaP7p-g
+n_Lv_mw6m6c,UCTnNRrAUADc-NY8MnrPhGVQ
+n_Lv_mw6m6c,UC0yNcF0IMwKWBX40Wa9H8Cw
+n_Lv_mw6m6c,UCmX8fiFP5ppRTgwMrvd4zKA
+bash-4.4$ head author_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[31@cut -d $',' -f1,9 yt_comments.csv >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[31Phead[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Khead author_and_comment_ids.csv [C[C[C[C[C[C[C[C[C[C[31@cut -d $',' -f1,9 yt_comments.csv >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@9[C[C[1P[1@2
+bash-4.4$ aut[K[K[Khead author_and_comment_ids.csv 
+comment_id,channel_id
+UgxoteA9ZjV69ao3wzd4AaABAg,UCgio1HCYjOq7WCy9vjjA_6g
+UgwVIjcXJSlw1bdNuAJ4AaABAg,UCBePWH5sTKbTZPeCmCrWhcw
+UgwDgmIPkt3zdqFsd2p4AaABAg,0
+UgyXOOr1fWgF1ZQhrzR4AaABAg
+0
+UgyVSx48xDaEwIgWY-B4AaABAg,UCBxU0wKr8kCxh85wZaP7p-g
+Ugwh4YY9xRkFi54EUNd4AaABAg,UCTnNRrAUADc-NY8MnrPhGVQ
+UgxlHkzzYDm8kMvnGmJ4AaABAg,UC0yNcF0IMwKWBX40Wa9H8Cw
+Ugzdog4eXnMpgtesK0F4AaABAg,UCmX8fiFP5ppRTgwMrvd4zKA
+bash-4.4$ mv author_and_comment_ids.csv processed/
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ 
+bash-4.4$ awk _[K-F [K, NR>1'NR>1[C[C[C[C {
+> iud = [K[K[K[K[Kd = [K[K[K=[K[K[Kid=$2
+> gsub(/"/,"",$6)
+> n=split($6, words, /[[:space:]]+/)
+> awk -F, 'NR>1 {
+id=$2
+gsub(/"/,"",$6)
+n=split($6, words, /[[:space:]]+/)[A[A[A[C[Cmv author_and_comment_ids.csv processed/
+[K
+[K
+[K[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Phead author_and_comment_ids.csv [C[Cmv author_and_comment_ids.csv processed/[C[C[25Pawk -F, 'NR>1 {
+id=$2
+gsub(/"/,"",$6)
+n=split($6, words, /[[:space:]]+/)[A[A[A[C[C[K
+[K
+[K
+[K[A[A[A[C[C^C
+bash-4.4$ awk -F, 'NR>1 {
+id=$2
+gsub(/"/,"",$6)
+n=split($6, words, /[[:space:]]+/)[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[K2
+> ^C
+bash-4.4$ awk -F, 'NR>1 {
+id=$2[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K{
+> id =$2[1P=$2[C[C[C
+> txt = [K[K[K[K[K[Kkeyword[K[K[K[K[K[K[Kword_in_comment[C[Cawk -F, 'NR>1 {
+id=$2[Aword_in_comment
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C=tolower($2[K6)
+> gsub()/)")/),)")"),)t)x)t)[1P)[1P)[1P)w)o)r)d)_)i)n)_)c)o)m)m)e)n)t)[C
+> if()wo)r)d)_)i)n)_)c)o)m)m)e)n)t) )~) )/)()^)[C)[K|)[C)[))[)):))s))p))a))c))e)):))]))]))[Cg)r)e)a)t)()[C)[))[)):))s))p))a))c))e)):))]))]))|))$))[C/)[C {
+> print "great," id
+> }
+> }' commen[K[K[K[K[K[Kyt_comments.csv > processed/great_in_comments.csv
+bash-4.4$ cd processed/
+bash-4.4$ head great_in_comments.csv 
+great,UgyLONpQAx7JYIWf_3d4AaABAg
+great,UgyoY9X-snqxWwz5ErJ4AaABAg
+great,UgygiZpyurPQtn6nwSR4AaABAg
+great,UgzcQ9rZ3tTsNFu-Onx4AaABAg
+great,UgwOMRhmiAAIoyaW7F94AaABAg
+great,Ugy_18jAmZzdBuILp494AaABAg
+great,Ugy9NN6xFRJ7NyShGYd4AaABAg
+great,Ugz9Em5vDvQIzLhT3jp4AaABAg
+great,UgzERsylfXMo1vYR_Ed4AaABAg
+great,Ugx9KdW99q5fSQwGUtV4AaABAg.AN_OiM5AbEPAN_xLPgN_ux
+bash-4.4$ exit
+
+Script done on 2025-09-29 19:30:37-04:00
