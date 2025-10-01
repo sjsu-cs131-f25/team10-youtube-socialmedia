@@ -1,33 +1,59 @@
-# vid id's -> comment id (one video, many comments)
+# !/usr/bin/env bash
+# Finding edges in data - jacob atanacio
+# setup
 
-# parent comment id -> reply id (each parent comment and all of it's replies)
+PROJECT_ROOT="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia"
+DATASET="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data"
+OUTPUT="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data/processed"
+LOG_DIR="${PROJECT_ROOT}/out"
+LOG_FILE="${LOG_DIR}/edge_log.txt"
+INPUT_CSV="${DATASET}/yt_comments.csv"
 
-# channel id(of commenter) -> comment id (basically comments from the same author relationship)
 
-# "great" -> comment id (all comments with the word "great")
+mkdir -p "${OUTPUT}" "${LOG_DIR}"
+# implementation
 
-PROJECT_ROOT = "$HOME/team10-youtube-socialmedia"
-DATASET = "/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data" # dataset dir
-OUTPUT = "/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data/processed" # processed data
+# log will stream output to the logfile and append a timestamp to track exactly when the script is called each time
+log() {
+	  printf '%s - %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$1" | tee -a "${LOG_FILE}" >/dev/null
+  }
+
+log "Starting edge extraction"
+
+if [[ ! -f "${INPUT_CSV}" ]]; then
+	log "ERROR: Input file not found: ${INPUT_CSV}"
+	exit 1
+fi
+
+cd "${DATASET}"
 
 echo "Finding relationships in dataset (edges)"
-cd DATASET
+
+# 1) Video_id | Comment_id  (one video -> many comments)
 echo "Video_id | Comment_id"
-cut -d $',' -f1,2 yt_comments.csv > processed/videos_and_comment_ids.csv
+awk -F, 'NR==1 {print "video_id,comment_id"; next} {print $2 "," $1}' \
+	"yt_comments.csv" > "${OUTPUT}/videos_and_comment_ids.csv"
 
+# 2) Parent comment id -> reply id
 echo "parent_comment_id | reply_id"
-awk -F, 'NR==1 {print "parent_comment_id,reply_id"; next} $7 == 1 { print $2 "," $4 }' yt_comments.csv > processed/comments_with_replies.csv
+awk -F, 'NR==1 {print "parent_comment_id,reply_id"; next} $7 == 1 { print $2 "," $4 }' \
+	"yt_comments.csv" > "${OUTPUT}/comments_with_replies.csv"
 
-echo "author_id | video_id" # author's channel and each other their comments posted
-cut -d $ '\t' -f9,1 yt_comments.csv > processed/author_and_comment_ids.csv
+# 3) author channel id -> comment id
+echo "author_id | comment_id"
+awk -F, 'NR==1 {print "author_id,comment_id"; next} {print $9 "," $1}' \
+	"yt_comments.csv" > "${OUTPUT}/author_and_comment_ids.csv"
 
-echo "all comment id's that have the word 'great' "
-awk -F, 'NR>1 {
-	id = $1
-	txt=tolower($2)
-	gsub(/"/,"",txt)
-	if(txt ~ /(^|[[:space:]])great([[:space:]]|$)/) {
-		print ("great," id
-	}
-}' yt_comments.csv > processed/great_in_comments.csv
+# 4) "great" -> comment id (whole-word, case-insensitive)
+echo "all comment id's that have the word 'great'"
+awk -F, '
+NR==1 { print "word,comment_id"; next }
+{
+	id=$1
+	txt=$2
+	gsub(/"/, "", txt)
+	txt=tolower(txt)
+	if (txt ~ /(^|[^[:alnum:]_])great([^[:alnum:]_]|$)/) {print "great," id}
+}' "yt_comments.csv" > "${OUTPUT}/great_in_comments.csv"
 
+log "Successfully finished defining edges!"
