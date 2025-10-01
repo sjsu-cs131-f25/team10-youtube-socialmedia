@@ -49,8 +49,8 @@ echo "all comment id's that have the word 'great'"
 awk -F, '
 NR==1 { print "word,comment_id"; next }
 {
-	id=$1
-	txt=$2
+	id=$2
+	txt=$6
 	gsub(/"/, "", txt)
 	txt=tolower(txt)
 	if (txt ~ /(^|[^[:alnum:]_])great([^[:alnum:]_]|$)/) {print "great," id}
