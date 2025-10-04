@@ -17,7 +17,7 @@ AUTH="$PROC/author_and_comment_ids.csv"
 GREAT="$PROC/great_in_comments.csv"
 
 # Writable output
-OUT="$HOME/project2/edges"
+OUT="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/out"
 mkdir -p "$OUT"
 
 echo "Threshold N = $N"
