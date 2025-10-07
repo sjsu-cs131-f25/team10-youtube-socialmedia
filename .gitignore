@@ -221,3 +221,6 @@ data/*.zip
 data/*.tsv
 # Keep tiny samples folder
 !data/samples/
+Project3/cluster_histogram.png
+Project3/cluster_sizes.tsv
+Project3/cluster_sizes_histogram.tsv
