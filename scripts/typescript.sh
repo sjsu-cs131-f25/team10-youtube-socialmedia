@@ -136,5 +136,20 @@ cut -d, -f1 "${EDGES}/great_in_comments_edges_thresholded.tsv" \
 | tail -n +2 | sort | uniq -c | sort -nr | head -30 \
 > "${EDGES}/great_in_comments_top30.txt"
 
+# Create Top-30 videos from the yt_comments.csv (top30_overal.txt)
+cut -d, -f1 "${INPUT_CSV}" \
+  | tail -n +2 \
+  | grep -v '^$' \
+  | sort \
+  | uniq -c \
+  | sort -nr \
+  | head -30 > "${EDGES}/top_30_videos.txt"
+
+# Compare against videos_and_comment_ids_top30.txt and write diff
+comm -3 <(sort "${EDGES}/videos_and_comment_ids_top30.txt") <(sort "${EDGES}/top_30_videos.txt") \
+  | sed -e 's/^\t/> /' -e 's/^[^\t].*/< &/' > "${EDGES}/diff_top30.txt"
+  
+# If diff file is empty, write "No differences"
+[ -s "${EDGES}/diff_top30.txt" ] || echo "No differences" > "${EDGES}/diff_top30.txt"
 # ---------------------------------------------------------------------------
 echo "[$(date '+%F %T')] Done. Outputs in: ${EDGES}"
