@@ -152,4 +152,22 @@ comm -3 <(sort "${EDGES}/videos_and_comment_ids_top30.txt") <(sort "${EDGES}/top
 # If diff file is empty, write "No differences"
 [ -s "${EDGES}/diff_top30.txt" ] || echo "No differences" > "${EDGES}/diff_top30.txt"
 # ---------------------------------------------------------------------------
+
+# Step 3 of Project 3 — compute cluster sizes and a size→frequency table
+THRESHOLDED_AUTH_EDGES="${EDGES}/author_and_comment_ids_edges_thresholded.tsv"
+
+cut -d',' -f1 "${THRESHOLDED_AUTH_EDGES}" \
+| tail -n +2 \
+| sort \
+| uniq -c \
+| sort -n \
+| sed -E 's/^[[:space:]]*([0-9]+)[[:space:]]+(.+)$/\2\t\1/' \
+> "${EDGES}/cluster_sizes.tsv"
+
+cut -f2 "${EDGES}/cluster_sizes.tsv" \
+| sort -n \
+| uniq -c \
+| sed -E 's/^[[:space:]]*([0-9]+)[[:space:]]+(.+)$/\2\t\1/' \
+> "${EDGES}/cluster_sizes_histogram.tsv"
+
 echo "[$(date '+%F %T')] Done. Outputs in: ${EDGES}"
