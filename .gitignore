@@ -224,3 +224,6 @@ data/*.tsv
 Project3/cluster_histogram.png
 Project3/cluster_sizes.tsv
 Project3/cluster_sizes_histogram.tsv
+Project3/cluster_histogram.png
+Project3/cluster_sizes.tsv
+Project3/cluster_sizes_histogram.tsv
