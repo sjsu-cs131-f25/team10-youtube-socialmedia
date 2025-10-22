@@ -228,3 +228,7 @@ Project3/cluster_histogram.png
 Project3/cluster_sizes.tsv
 Project3/cluster_sizes_histogram.tsv
 out/
+
+# Track PA3 outputs (exception inside out/)
+!out/pa3/
+!out/pa3/**
