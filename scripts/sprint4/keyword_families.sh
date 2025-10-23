@@ -1,9 +1,9 @@
 set -euo pipefail
-
+read -p "Please enter Youtube Video ID: " VIDEOID
 VIDEOID="${VIDEOID:-n_Lv_mw6m6c}"
 OUTPUT="${OUTPUT:-/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data/processed/}"
 KW="${KW:-/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data/sentiment_keywords.csv}"
-CMT="${CMT:-/mnt/scratch/CS131_jelenag/students/jacoba/yt_comments.csv}"
+CMT="${CMT:-/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data/yt_comments.csv}"
 
 [ -n "$VIDEOID" ] || { echo "ERROR: VIDEOID is empty"; exit 1; }
 mkdir -p "$OUTPUT"
