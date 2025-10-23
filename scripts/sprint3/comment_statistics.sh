@@ -1,6 +1,10 @@
 #!/bin/env bash
 
+
 # gets statistics of the comment counts of each video
+# project directories are initiated 
+# comment_count.csv counts each comment that shares the same video_id
+# we use datamash to compute summary statistics for the sum, mean, and median to create comment_status.tsv
 
 PROJECT_ROOT="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia"
 DATASET="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data"

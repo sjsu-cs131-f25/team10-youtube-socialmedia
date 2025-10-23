@@ -1,3 +1,13 @@
+#!/bin/env bash
+
+# This script processes the yt_comments.csv file to extract strctured data for analysis by creating multiple edge tables
+# each directory needed for this script is defined as a variable 
+# the execution is logged for tracking outputs
+# the necessary file permissions are given to the user executing the script with chmod commands
+# multiple awk commands are used to parse the CSV and create four different files:
+# videos_and_comment_ids, comments_with_replies_ author_and_comment_replies, and great_in_comments
+
+
 PROJECT_ROOT="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia"
 DATASET="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data"
 OUTPUT="/mnt/scratch/CS131_jelenag/projects/team10_sec3/team10-youtube-socialmedia/data/processed"
