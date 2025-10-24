@@ -32,18 +32,16 @@ OUTPUT_FILE="${VIDEO_ID}_sentiment_bucket_analysis.csv"
 
 cd "$OUTPUT_DIR"
 
-awk -F=',' 'BEGIN {OFS=","}
-NR==1 {
+awk -F',' 'BEGIN { OFS="," }
+NR==1{
 	print "video_id","total_count","positive_ratio","positive_bin","negative_ratio","negative_bin"
 	next
 }
-NR>1{
+{
 	videoid=$1
 	key_fam=$2
 	count=$4 + 0
-	#print videoid
-	#print key_fam
-	#print count
+	
 	total += count
 	if (key_fam == "positive"){
 		pos += count
@@ -67,7 +65,7 @@ END {
 	else if (neg_ratio > 0.3) n_bin = "Moderately Negative"
 	else n_bin = "Low Negative"
 	
-	printf "%s,%d,%.2f,%s,%.2f,%s\n", $"{VIDEO_ID}", total, p_ratio, p_bin, n_ratio, n_bin	
+	print videoid, total, pos_ratio, p_bin, neg_ratio, n_bin
 }' "${OUTPUT_DIR}/${KEYWORD_CSV}" > "${OUTPUT_FILE}"
 
 echo "input file: ${OUTPUT_DIR}/${KEYWORD_CSV}"
