@@ -23,8 +23,8 @@ OUTPUT_FILE="${VIDEO_ID}_sentiment_bucket_analysis.csv"
 
 # Verify directories are correct
 #echo "Home path: ${PROJECT_ROOT}"
-echo "Output directory: ${OUTPUT_DIR}"
-echo "Output file: ${OUTPUT_FILE}"
+#echo "Output directory: ${OUTPUT_DIR}"
+#echo "Output file: ${OUTPUT_FILE}"
 #echo "Dataset directory: ${DATASET_DIR}"
 #echo "Video sentiment CSV Path: ${KEYWORD_CSV}"
 
@@ -38,9 +38,11 @@ NR==1 {
 	next
 }
 NR>1{
-	videoid = $1
-	key_fam = $2
-	count = $4 + 0
+	videoid=$1
+	key_fam=$2
+	count=$4 + 0
+	#print videoid
+	#print key_fam
 	#print count
 	total += count
 	if (key_fam == "positive"){
@@ -68,6 +70,7 @@ END {
 	printf "%s,%d,%.2f,%s,%.2f,%s\n", $"{VIDEO_ID}", total, p_ratio, p_bin, n_ratio, n_bin	
 }' "${OUTPUT_DIR}/${KEYWORD_CSV}" > "${OUTPUT_FILE}"
 
-
+echo "input file: ${OUTPUT_DIR}/${KEYWORD_CSV}"
+echo "output file: ${OUTPUT_DIR}/${OUTPUT_FILE}"
 
 
