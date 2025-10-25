@@ -1,4 +1,4 @@
-set -euo pipefail
+set -u
 
 INPUT="$1"
 OUT="out"
@@ -29,9 +29,9 @@ for(k in count) print k"\t"count[k]
 (head -n 1 "$OUT/clean.tsv";
 tail -n +2 "$OUT/clean.tsv" | sort -t$'\t' -k5,5nr | head -n 10) > "$OUT/topN.tsv"
 
-awk -F'\t' -v OFS='\t' '{print $1,$3,$5,$4}' "$OUT/clean.tsv" > "$OUT/skinny.tsv"
+echo "[INFO] Generating skinny.tsv..."
+awk -F'\t' -v OFS='\t' 'NR==1 || NF>0 {print $1,$3,$5,$4}' "$OUT/clean.tsv" > "$OUT/skinny.tsv"
 
-awk -F'\t' -v OFS='\t' '{print $1,$3,$5,$4}' "$OUT/clean.tsv" > "$OUT/skinny.tsv"
 echo "[DONE] All required TSVs generated:"
 ls -1 "$OUT" | sed 's/^/out\//'
 
