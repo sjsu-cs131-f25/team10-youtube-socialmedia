@@ -94,41 +94,15 @@ The script records progress and warnings to `logs/run.log`.
 
 ---
 
-## Individual Contributions
+## My Contributions — Jacob Atanacio ([@Javacadu](https://github.com/Javacadu))
 
-### Jacob Atanacio ([@Javacadu](https://github.com/Javacadu))
-
-- **YouTube Data Collector** (`src/collector.py`): Designed and built the complete YouTube API data collection pipeline from scratch. Implemented functions for collecting channel metadata, video metadata, and comments (including threaded replies) with CSV persistence, deduplication via collected-ID logs, robust error handling, logging, and type hints.
-- **Project Infrastructure & Setup**: Initialized the repository structure, created `requirements.txt` for dependency management, configured `.gitignore`, and organized scripts into sprint-based directories (`scripts/sprint2/`, `scripts/sprint3/`, `scripts/sprint4/`).
-- **Bash Pipeline — Steps 5 & 6**: Authored the temporal aggregation logic (Step 5 — monthly comment volume and per-video averages → `out/temporal.tsv`) and the signal/token discovery logic (Step 6 — stop-word–filtered top-token frequency → `out/signals.tsv`) in `run_pa4.sh`.
-- **Sprint 2 Scripts**: Created `access_and_snapshot.sh`, `eda.sh`, and `run_project2.sh` for initial exploratory data analysis and batch execution.
-- **Sprint 3 Scripts**: Developed `comment_statistics.sh` for statistical summaries and `define_edges.sh` for extracting keyword-to-comment-ID edge relationships.
-- **Code Review & Project Management**: Reviewed and merged team pull requests, updated shared output paths, and ensured the pipeline ran correctly on the team's shared VM environment.
-- **Documentation**: Authored the project README covering dataset description, prerequisites, usage instructions, and output descriptions.
-
-### Karmehr Arora
-
-- **Data Quality & Clustering** (`scripts/sprint3/Sprint3_runnable.sh`, `scripts/sprint4/data_quality.sh`): Set up data quality filtering, datetime processing, and cluster-based analysis.
-- **Sentiment Analysis** (`scripts/sprint4/sentiment_analysis.sh`, `scripts/sprint4/sentiment_kw_gen.sh`): Created sentiment analysis scripts with positive/negative ratio bucketing and keyword-family generation.
-- **Entity Summary** (`scripts/sprint4/entity_summary.sh`): Built the entity numeric analysis pipeline.
-- **Dataset Maintenance**: Updated the dataset description, created data cards, managed CSV data hosting, and cleaned project folders.
-
-### Hien Ly ([@H13NL](https://github.com/H13NL))
-
-- **Sprint 3 — Steps 2 & 4** (`scripts/sprint3/Step2_4.sh`): Developed frequency tables, Top-N entity lists, and comparison steps for sprint 3 deliverables.
-- **TypeScript Port** (`scripts/typescript/`): Ported analysis steps into TypeScript.
-- **Top-30 Overall**: Created the `top30_overall` aggregation for cross-video comment ranking.
-
-### Richa Vakharia
-
-- **Runnable Pipeline Script** (`run_pa4.sh`): Integrated steps 3–6 into the main `run_pa4.sh` pipeline and ensured end-to-end execution.
-- **Skinny Table Preview**: Implemented the compact "skinny" table view of 10k rows for quick data inspection.
-- **PR Management**: Reviewed and merged multiple team pull requests across sprints 3 and 4.
-
-### Trey C. ([@Trv3son](https://github.com/Trv3son))
-
-- **Reproducible sed + awk Pipeline (Steps 1 & 2)**: Authored the core `sed`/`awk` cleaning and normalization pipeline for raw CSV → clean TSV conversion.
-- **Sprint 3 — Step 3 Histogram** (`scripts/sprint3/step3_cluster_histogram.sh`): Created the cluster-size histogram shell script and generated the histogram PNG (`Project3/cluster_histogram.png`).
-- **Project3 Deliverables**: Consolidated Project3 outputs and finalized reproducible artifacts.
+| Area | Description | Tech | My Contributions |
+|------|-------------|------|------------------|
+| [YouTube Data Collector](src/collector.py) | Full YouTube API data collection pipeline for channel, video, and comment data with 314k+ rows collected | Python, YouTube Data API v3 | Designed and built the complete pipeline from scratch — channel/video/comment collection, threaded reply handling, CSV persistence, deduplication via collected-ID logs, error handling, logging, and type hints |
+| [Pipeline — Steps 5 & 6](run_pa4.sh) | Temporal aggregation and signal/token discovery stages of the Bash processing pipeline | Bash, awk | Authored Step 5 (monthly comment volume and per-video averages → `out/temporal.tsv`) and Step 6 (stop-word–filtered top-token frequency → `out/signals.tsv`) |
+| [Sprint 2 Scripts](scripts/sprint2/) | Exploratory data analysis and batch execution scripts | Bash | Created `access_and_snapshot.sh`, `eda.sh`, and `run_project2.sh` for initial EDA and batch runs |
+| [Sprint 3 Scripts](scripts/sprint3/) | Statistical summaries and keyword-to-comment edge extraction | Bash, awk | Developed `comment_statistics.sh` and `define_edges.sh` for statistical analysis and edge relationship extraction |
+| Project Infrastructure | Repository structure, dependency management, and sprint directory organization | Git, Python | Initialized repo structure, created `requirements.txt`, configured `.gitignore`, organized scripts into `scripts/sprint2/`, `scripts/sprint3/`, `scripts/sprint4/` |
+| Code Review & Documentation | PR management, shared VM path configuration, and project README | Markdown, Git | Reviewed and merged team PRs, updated shared output paths for VM environment, authored the full project README |
 
 ---
